@@ -1,0 +1,167 @@
+*{
+    box-sizing: border-box;
+    letter-spacing: .3px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background: linear-gradient(180deg, rgb(1, 16, 30), rgb(0, 195, 2558));
+    height: 99vh;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.container{
+    border-radius: 10px;
+    padding: 0 50px;
+    background-color: rgba(6, 24, 33, 0.952);
+    box-shadow: 0px 0px 40px 5px rgb(7, 43, 61);
+    overflow: hidden;
+}
+.head-container{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    height: 50px;
+}
+.logo{
+    font-weight: bold;
+    font-size: 20px;
+    align-self: center;
+}
+.head-container > .navigator {
+    align-self: center;
+    z-index: 2;
+    font-size: 15px;
+}
+.main-container{
+    display: flex;
+    align-items: center;
+
+}
+.navs{
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: 700;
+    padding: 0 10px;
+}
+.navs:hover{
+    color: rgb(0, 195, 255);
+}
+.name{
+    font-size: 30px;
+    text-transform: capitalize;
+    margin-bottom: -15px;
+}
+.role{
+    color: rgb(0, 195, 255);
+}
+.lorem-ipsom{
+    width: 400px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+.btn-hold{
+    display: flex;
+    gap: 25px;
+    padding-bottom: 20px;
+}
+.hire{
+    position: relative;
+    background-color: transparent;
+    color: rgb(0, 195, 255);
+    border: 2px solid rgb(0, 195, 255);
+    border-radius: 5px;
+    width: 95px;
+    padding: 5px;
+    font-weight: 700;
+    text-transform: capitalize;
+    cursor: pointer;
+    z-index: 1;
+    transition: background-color 1s linear;
+    overflow: hidden;
+}
+.hire:hover{
+    color: rgba(8, 26, 36, 0.952);
+}
+.hire::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0%;
+    height: 0%;
+    transition: width .7s linear;
+    z-index: -1;
+}
+.hire:nth-of-type(2)::after{
+   transform: translateX(-95px);
+   transition: transform .7s linear;
+}
+.hire:hover::after{
+    content: "";
+    background-color: rgb(0, 195, 255);
+    color: rgba(8, 26, 36, 0.952);
+    width: 100%;
+    height: 100%;
+
+}
+.hire:hover:nth-of-type(2)::after{
+    transform: translateX(0);
+}
+.image-div{
+    position: relative;
+    margin: auto;
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+.image-div::before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 250px;
+    height: 434px;
+    transform: translate(0px, -60px);
+    pointer-events: none;
+    background: radial-gradient(circle, transparent, rgba(1, 24, 35, 0.951) 55%);
+    mix-blend-mode: darken;
+    border-radius: 20px;
+    z-index: 1;
+}
+.my-img{
+    transform: translate(0px, -60px);
+    width: 250px;
+    height: 433px;
+    object-fit: cover;
+    object-position: bottom;
+    border-radius: 20px;
+    filter: saturate(.5%);
+}
+footer{
+    padding: 30px 0 15px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 150px;
+}
+.socials{
+    color: black;
+    background-color: rgb(0, 195, 255);
+    border: 1px dotted rgb(0, 195, 255);
+    border-radius: 50%;
+    font-size: 13px;
+    width: 50px;
+    height: 30px;
+    justify-self: center;
+    cursor: pointer;
+    padding: 0;
+    
+}
+.socials:hover{
+    font-size: 18px;
+}
